@@ -6,7 +6,7 @@
 		"mac": "2.2074",
 		"ios": "2.2074"
 	},
-	"id": "vexitgd.demon-view",
+	"id": "vexitgd.demon-viewer",
 	"resources": { "files": ["logo.png", "resources/demon_view_icon.png", "resources/demon_view_icon_512.png"] },
 	"logo": "logo.png",
 	"name": "Demon View",
