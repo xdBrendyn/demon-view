@@ -6,12 +6,18 @@
 		"mac": "2.2074",
 		"ios": "2.2074"
 	},
-	"id": "vexitgd.demon.view",
-	"name": "demon.view",
-	"version": "v1.0.0",
+	"id": "vexitgd.demon-view",
+	"resources": { "files": ["logo.png", "resources/demon_view_icon.png", "resources/demon_view_icon_512.png"] },
+	"logo": "logo.png",
+	"name": "Demon View",
+	"version": "1.0.0",
 	"developer": "VexitGD",
-	"description": "Adds a button to list all the demons you have completed.",
+	"description": "",
 	"dependencies": {
 		"geode.node-ids": ">=v1.20.0"
-	}
+	},
+	"tags": [		
+		"online",
+		"utility"
+	]
 }

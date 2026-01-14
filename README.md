@@ -1,19 +1,8 @@
-# demon.view
-This is where she makes a mod.
+# Demon View
 
 <img src="logo.png" width="150" alt="the mod's logo" />
 
-*Update logo.png to change your mod's icon (please)*
-
-## Getting started
-We recommend heading over to [the getting started section on our docs](https://docs.geode-sdk.org/getting-started/) for useful info on what to do next.
-
-## Build instructions
-For more info, see [our docs](https://docs.geode-sdk.org/getting-started/create-mod#build)
-```sh
-# Assuming you have the Geode CLI set up already
-geode build
-```
+A Mod that adds a button to your profile, showing you a list of all the demons you have ever completed.
 
 # Resources
 * [Geode SDK Documentation](https://docs.geode-sdk.org/)
