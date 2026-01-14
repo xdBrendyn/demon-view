@@ -1,6 +1,6 @@
 # Demon View
 
-<img src="logo.png" width="150" alt="the mod's logo" />
+<img src="icon.png" width="150" alt="the mod's logo" />
 
 A Mod that adds a button to your profile, showing you a list of all the demons you have ever completed.
 
