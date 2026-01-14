@@ -95,9 +95,9 @@ namespace {
                 auto lvl = glm->getSavedLevel(id);
                 if (!lvl) continue;
 
+                if (!lvl->m_demon) continue;
                 glm->verifyLevelState(lvl);
                 if (lvl->m_normalPercent < 100) continue;
-                if (!lvl->m_demon) continue;
 
                 out.push_back(lvl);
             }
@@ -142,10 +142,6 @@ namespace {
         int m_page = 0;
         int m_filterTier = 0;
 
-        std::array<int, 6> m_tierToIconIdx{};
-        std::array<std::string, 6> m_tierToFrameName{};
-        bool m_tierMapReady = false;
-
         CCMenu* m_listMenu = nullptr;
         CCLabelBMFont* m_pageLabel = nullptr;
         CCMenu* m_filterMenu = nullptr;
@@ -162,14 +158,6 @@ namespace {
             case 6: return 5;
             default: return 3;
             }
-        }
-
-        static GJDifficultyName demonDifficultyNameAuto() {
-            static std::optional<int> s_found;
-            if (s_found) return static_cast<GJDifficultyName>(*s_found);
-            auto cache = CCSpriteFrameCache::sharedSpriteFrameCache();
-            s_found = 0;
-            return static_cast<GJDifficultyName>(0);
         }
 
         CCNode* makeDemonIconNodeForTier(int tier, float scale) const {
@@ -356,8 +344,11 @@ namespace {
 
             this->onClose(nullptr);
 
-            auto info = LevelInfoLayer::create(lvl, false);
-            CCDirector::sharedDirector()->getRunningScene()->addChild(info, 200);
+            if (auto scene = CCDirector::sharedDirector()->getRunningScene()) {
+                if (auto info = LevelInfoLayer::create(lvl, false)) {
+                    scene->addChild(info, 200);
+                }
+            }
         }
 
         CCNode* makeFilterIconButtonNode(int tier) {
