@@ -1,0 +1,17 @@
+{
+	"geode": "4.10.0",
+	"gd": {
+		"win": "2.2074",
+		"android": "2.2074",
+		"mac": "2.2074",
+		"ios": "2.2074"
+	},
+	"id": "vexitgd.demon.view",
+	"name": "demon.view",
+	"version": "v1.0.0",
+	"developer": "VexitGD",
+	"description": "Adds a button to list all the demons you have completed.",
+	"dependencies": {
+		"geode.node-ids": ">=v1.20.0"
+	}
+}
